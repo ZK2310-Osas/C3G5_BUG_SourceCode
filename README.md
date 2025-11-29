@@ -1,12 +1,13 @@
 _**--Team Details--**_
 
 **Team Code:** C3G5
-
+**Team Name:** BUG
 **Members:** CHANG ZI KAI, LEE EARN HUI, LEE MIN MING, LEE WIE JIE, YONG PARK KEI
 
 _**--Topic--**_
 
 Healthy Trip Advisor: AI-Powered Urban Travel Safety System (SDG 3– Good Health & Well-Being)
+<img width="552" height="852" alt="image" src="https://github.com/user-attachments/assets/cfbb2740-5fb9-4def-859b-5534b996faa1" />
 
 _**--Problem Statement--**_
 
