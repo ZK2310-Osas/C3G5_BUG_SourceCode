@@ -179,6 +179,32 @@ These datasets are combined to calculate a weighted health score and provide act
 
 _**--Instructions to Run the Prototype--**_
 
+**STEP 1: Setup API Keys**
+
+To run this project, you need to create your own API keys for OpenAI, TomTom, and AQICN.
+
+1. Create API Keys
+
+- OpenAI: https://platform.openai.com/account/api-keys
+
+- TomTom: https://developer.tomtom.com/
+
+- AQICN (Air Quality): https://aqicn.org/data-platform/token/
+
+2. Add Keys to Local Environment
+
+- In the root of the project, create a file named `.env.local`.
+
+- Open `.env.local` in a text editor and add your API keys like this:
+
+   OPENAI_API_KEY=your_openai_key
+
+   TOMTOM_API_KEY=your_tomtom_key
+
+   AQICN_TOKEN=your_aqicn_token
+
+**Step 2: Run the Project**
+
 1. Ensure _Node.js_ is enabled on your system.
 
 2. Open the Terminal and allow it to make changes to your device if prompted.
