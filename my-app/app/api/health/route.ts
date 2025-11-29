@@ -80,8 +80,16 @@ export async function GET(req: Request) {
     //
     // STEP 4 — Calculate weighted health score
     //
-    const pollutionHealth =
-      aqi !== null ? Math.max(0, 100 - (Math.min(aqi, 500) / 500) * 100) : null;
+    let pollutionHealth: number | null = null;
+    if (aqi !== null) {
+      if (aqi <= 50) {
+        pollutionHealth = 100;
+      } else if (aqi <= 100) {
+        pollutionHealth = 50;
+      } else {
+        pollutionHealth = 0;
+      }
+    }
 
     const trafficHealth =
       congestionPercent !== null
@@ -93,8 +101,9 @@ export async function GET(req: Request) {
         ? 0.6 * pollutionHealth + 0.4 * trafficHealth
         : pollutionHealth ?? trafficHealth ?? null;
 
+
     //
-    // STEP 5 — Categorize result
+    // STEP 5 — Categorize result with detailed, group-specific advice
     //
     let level = "No data";
     let advice = "Insufficient data.";
@@ -103,22 +112,26 @@ export async function GET(req: Request) {
     if (overallHealth !== null) {
       if (overallHealth >= 70) {
         level = "Good";
-        advice = "Safe for all.";
+        advice = "Safe for all visitors, including children, elderly, and people with respiratory or heart conditions.";
         suitable = true;
       } else if (overallHealth >= 50) {
         level = "Moderate";
-        advice = "OK, but sensitive groups should be careful.";
+        advice =
+          "Acceptable for most people, but sensitive groups (children, elderly, pregnant women, people with asthma or heart conditions) should exercise caution and avoid prolonged outdoor activities.";
         suitable = true;
       } else if (overallHealth >= 30) {
         level = "Unhealthy for sensitive groups";
-        advice = "Sensitive people should limit outdoor activity.";
-        suitable = true;
+        advice =
+          "People with asthma, heart conditions, elderly, and children should minimise exposure. Healthy adults can go outside but avoid strenuous activities.";
+        suitable = false;
       } else {
         level = "Very unhealthy";
-        advice = "Not suitable for vulnerable individuals.";
+        advice =
+          "Air quality and traffic conditions are hazardous. Vulnerable populations (children, elderly, pregnant women, people with respiratory or heart issues) should stay indoors. Only go outside if absolutely necessary, and avoid physical exertion.";
         suitable = false;
       }
     }
+
 
     //
     // STEP 6 — Optional AI advice
