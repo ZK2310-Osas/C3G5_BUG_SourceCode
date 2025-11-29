@@ -126,6 +126,14 @@ _**--Expected Output--**_
 
    - Real-time congestion percentage using algorithm stated in TI (Traffic Index)
 
+8. Coordinates
+   
+   - Displays the exact coordinates of the location entered by the user
+   
+9. Map Display
+    
+    - The identified coordinates are pinned on the OpenStreetMap interface for visual reference
+
 _**--Technologies Used--**_
 
 _Backend: JavaScript, OpenAI AI Agent_
