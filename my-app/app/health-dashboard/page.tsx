@@ -213,8 +213,11 @@ export default function HealthDashboardPage() {
     <div className="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-900 font-sans">
       <main className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 space-y-6">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white text-center">
-          AI-Powered Safety Advisor
+        Healthy Trip Advisor:
         </h1>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center">
+        AI-Powered Urban Travel Safety System
+        </h2>
 
         <p className="text-gray-600 dark:text-gray-300 text-center">
           Type a location to get real-time air, traffic safety score, and AI advice.
