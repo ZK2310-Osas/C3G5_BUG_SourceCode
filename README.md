@@ -1,8 +1,8 @@
 _**--Team Details--**_
 
-**Team Code:** C3G5
-**Team Name:** BUG
-**Members:** CHANG ZI KAI, LEE EARN HUI, LEE MIN MING, LEE WIE JIE, YONG PARK KEI
+_**Team Code:** C3G5_
+_**Team Name:** BUG_
+_**Members:** CHANG ZI KAI, LEE EARN HUI, LEE MIN MING, LEE WIE JIE, YONG PARK KEI_
 
 _**--Topic--**_
 
