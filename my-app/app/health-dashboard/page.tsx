@@ -202,9 +202,9 @@ export default function HealthDashboardPage() {
     score !== null
       ? score > 80
         ? "text-green-600"
-        : score > 60
+        : score > 49
         ? "text-yellow-600"
-        : score > 40
+        : score > 39
         ? "text-orange-600"
         : "text-red-600"
       : "";
