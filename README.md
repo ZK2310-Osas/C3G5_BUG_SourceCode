@@ -1,34 +1,34 @@
---Team Details--
+_**--Team Details--**_
 
-Team Code: C3G5
+**Team Code:** C3G5
 
-Members: CHANG ZI KAI, LEE EARN HUI, LEE MIN MING, LEE WIE JIE, YONG PARK KEI
+**Members:** CHANG ZI KAI, LEE EARN HUI, LEE MIN MING, LEE WIE JIE, YONG PARK KEI
 
---Topic-- 
+_**--Topic--**_
 
 Healthy Trip Advisor: AI-Powered Urban Travel Safety System (SDG 3– Good Health & Well-Being)
 
---Problem Statement--
+_**--Problem Statement--**_
 
 Rapid urban development has led to declining air quality and increasing traffic congestion, exposing residents to significant health risks especially for vulnerable groups. 
 Although real-time air pollution and traffic datasets are available, they remain separate, lacking integration into a unified system capable of effectively assessing environmental health conditions. 
 These limitations reduce the efficiency of decision-making for both the public and city planners. 
 Therefore, this website addresses the lack of a real-time, data-driven framework by developing an AI-based solution that combines air quality, traffic, and health data to generate a health suitability index and provide alerts when conditions become unsafe.
 
---Target Users--
+_**--Target Users--**_
 
 Our target users include the general public, everyone has the accessibility to the website to view the index data. 
 We specifically focus on vulnerable groups such as infants, the elderly, and individuals with respiratory or cardiovascular conditions, as they are at higher risk during periods of poor air quality or heavy traffic congestion. 
 Additionally, we aim to support city planners and government agencies in identifying high-risk areas . 
 With real-time information, these agencies can develop targeted solutions and policies to protect public health.
 
---Solution Summary--
+_**--Solution Summary--**_
 
-Overview: This website features an AI-driven, real-time system that integrates the city’s air quality and traffic congestion indices for any location entered by the user. 
+**Overview:** This website features an AI-driven, real-time system that integrates the city’s air quality and traffic congestion indices for any location entered by the user. 
 The AI agent which operates in the backend of the website provides users with the latest index data along with recommendations on travel suitability and relevant alerts. 
 Additionally, an optional chatbox allows users to ask questions, with the AI agent generating tailored solutions and suggestions in response.
 
-Key Components:
+**Key Components:**
 1. Datasets
    
    The website retrieves real-time air quality and traffic congestion data from online sources, which serve as inputs for calculating the safety score.
@@ -38,20 +38,20 @@ Key Components:
    Collected datasets are first cleaned and standardized to ensure consistency.
    The processed datasets are then integrated into the algorithm for further computation.
 
-   Air Pollution Index (AQI):
+   _Air Pollution Index (AQI):_
 
    The AQI values are obtained directly from AQICN api.
    Each AQI reading is compared against our predefined AQI categorisation table, which maps specific AQI ranges to a pollution score.
    This pollution score is then used as a component in calculating the safety score.
    <img width="469" height="163" alt="image" src="https://github.com/user-attachments/assets/a7d33e7d-f340-4d5e-9a6a-d3a6f6d23bc5" />
 
-   Traffic Index (TI):
+   _Traffic Index (TI):_
 
    Step1: Find Ratio
 
    Formula: ratio = Current Speed / Freeflow Speed
    
-   Where Current Speed and Freeflow Speed is collected from the TomTom Traffic API
+   _*Where Current Speed and Freeflow Speed is collected from the TomTom Traffic API_
 
    Definition:
 
@@ -96,7 +96,7 @@ Key Components:
    The agent also assists in generating personalized recommendations, responding to user queries, and supporting decision-making with adaptive, context-aware insights.
    This module enhances system automation, reduces manual intervention, and provides users with more accurate and timely information.
 
---Expected Output--
+_**--Expected Output--**_
 
 1. Location to Check
 
@@ -126,9 +126,9 @@ Key Components:
 
    - Real-time congestion percentage using algorithm stated in TI (Traffic Index)
 
---Technologies Used--
+_**--Technologies Used--**_
 
-Backend: JavaScript, OpenAI AI Agent
+_Backend: JavaScript, OpenAI AI Agent_
 
 - The backend, built with JavaScript and integrated with the OpenAI AI Agent, handles user requests to provide environmental health advice. 
 When a user sends a GET request with a location(and optionally a question), it first converts the location into latitude and longitude using the OpenStreetMap Nominatim API. 
@@ -137,7 +137,7 @@ Based on this score, it categorizes the location as Good, Moderate, Unhealthy fo
 If the user includes a question, the backend also generates short, personalized guidance using OpenAI’s GPT-4o-mini model. 
 The final response is returned as a JSON object containing all data points, health assessments, advice, and AI-generated.
 
-Frontend: TypeScript + React
+_Frontend: TypeScript + React_
 
 - The frontend is built with TypeScript and React and serves as the user interface for the Healthy Trip Advisor system. 
 It allows users to enter a location, optionally ask a question for AI guidance, and view real-time safety information. 
@@ -145,13 +145,13 @@ The location input features autocomplete using OpenStreetMap Nominatim, with key
 When a user clicks the “Get Safety Score & Advice” button, the frontend calls the backend /api/health endpoint with the selected location and optional question, then displays the results including overall health score, pollution and traffic data, detailed advice, AI-generated advice, and coordinates. 
 The page also renders an interactive map using a MapComponent, highlighting the selected location. 
 
-Dataset source:
+_Dataset source:_
   
   Pollution index (AQI): score extract from aqicn.org 
 
   Token: 2eb300711acd96c79b3f713d995f9b8c09e9c51c 
 
-  URL:https://api.waqi.info/feed/@5780/token=2eb300711acd96c79b3f713d995f9b8c09e9c51c
+  URL: https://api.waqi.info/feed/@5780/token=2eb300711acd96c79b3f713d995f9b8c09e9c51c
 
   Traffic congestion index: score extract from Tom Tom Traffic API 
 
@@ -164,9 +164,9 @@ The Traffic Congestion Index comes from the TomTom Traffic API, offering live tr
 Access is protected via the provided API key.
 These datasets are combined to calculate a weighted health score and provide actionable safety advice for users.
 
---Instructions to Run the Prototype--
+_**--Instructions to Run the Prototype--**_
 
-1. Ensure Node.js is enabled on your system.
+1. Ensure _Node.js_ is enabled on your system.
 
 2. Open the Terminal and allow it to make changes to your device if prompted.
 
@@ -178,23 +178,23 @@ These datasets are combined to calculate a weighted health score and provide act
 
 4. In the Terminal, enter the command:
 
-   cd 'file-path'
+   _cd 'file-path'_
 
-   *Replace 'file-path' with your actual project directory path.
+   _*Replace 'file-path' with your actual project directory path._
 
 5. Run the development server by entering:
 
-   npm run dev
+   _npm run dev_
 
 6. Once the server starts, open one of the following links in your browser:
 
-   http://localhost:3000/health-dashboard
+   _http://localhost:3000/health-dashboard_
 
-   http://localhost:3001/health-dashboard
+   _http://localhost:3001/health-dashboard_
 
 7. The prototype should now be running and accessible in your browser.
 
---AI Usage Disclosure--
+_**--AI Usage Disclosure--**_
 
 OpenAI supported this project by providing general guidance and technical assistance throughout the development process. 
 ChatGPT was used to aid both frontend and backend development, including generating code, resolving errors, and improving overall development efficiency. 
