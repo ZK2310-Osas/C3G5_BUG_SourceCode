@@ -1,4 +1,4 @@
-//Team Details
+Team Details
 Team Code: C3G5
 Members: 
 CHANG ZI KAI
@@ -7,7 +7,7 @@ LEE MIN MING
 LEE WIE JIE
 YONG PARK KEI
 
-//Topic: 
+Topic: 
 Healthy Trip Advisor: AI-Powered Urban Travel Safety System (SDG 3– Good Health & Well-Being)
 
 //Problem Statement
