@@ -1,4 +1,4 @@
-_**--Team Details--**_
+_**--Team Detail--**_
 
 **Team Code:** C3G5
 
